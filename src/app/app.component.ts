@@ -35,4 +35,20 @@ export class AppComponent implements OnInit{
       }
     )
   }
+questions=[];
+  Readquest(subject:string) {
+    this.Subscription = this.service.Readquest(subject).subscribe(
+      (data: any) => {
+        if (data) {
+          console.log(data);
+          console.log(data.Result);
+          this.questions = data.Result;
+          console.log(this.questions);       
+        }
+        else {
+          console.log("Failed");
+        }
+      }
+    )
+  }
 }

@@ -15,4 +15,8 @@ export class CsesubjectsService {
   Read(catg: String): Observable<Read> {
     return this.http.get<Read>(`${this.url}sem_subjects/Read${catg}`);
   }
+
+  Readquest(subject: String): Observable<Read> {
+    return this.http.get<Read>(`${this.url}topics_table/Read${subject}`);
+  }
 }
