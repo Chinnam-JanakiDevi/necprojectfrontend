@@ -1,0 +1,112 @@
+.btn-circle.btn-xl {
+    width: 50px;
+    height: 50px;
+    border-radius: 35px;
+    font-size: 12px;
+}
+
+/* sidenav styles */
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgba(251, 255, 0, 0.925);
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  /* color: #818181; */
+  color: black;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: olivedrab;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* navbar top styles */
+.navbar{
+  display: flex;
+  padding: 0 30px;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+  background-color:yellowgreen;
+}
+.navbar ul{
+  list-style-type: none;
+}
+.navbar nav ul{
+  display: flex;
+
+}
+.navbar nav ul li{
+  padding: 10px;
+}
+.navbar ul li a{
+  text-decoration: none;
+}
+
+.center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
+.center p{
+  padding: 5px;
+}
+.center p button{
+  background-color: yellow;
+  padding: 10px 15px;
+  border-radius: 13px;
+}
+
+
+.buttons button{
+  margin-left: 40px;
+  width:300px;
+  height: 100px;
+  font-size: 30px;
+}
+.modal-body .btn-warning{
+  margin-left: 40px;
+  margin-top: 20px;
+  font-size: 25px;
+}
+.modal-body .success{
+  font-size: 20px;
+  color: green;
+  margin-left: 40px;
+  
+}
+.success b{
+  font-size: 40px;
+}
+.modal-body .subjs{
+  margin-left: 40px;
+}
+.modal-body .subjs .btn:active{
+  background-color: green;
+  color: white;
+}.modal-body .subjs .btn:focus{
+  background-color: green;
+  color: white;
+}

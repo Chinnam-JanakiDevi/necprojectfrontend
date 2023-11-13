@@ -1,0 +1,194 @@
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#">About</a>
+  <a href="#">Services</a>
+  <a href="#">Clients</a>
+  <a href="#">Contact</a>
+</div>
+<div class="navbar">
+  <p><span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span></p>
+  <nav>
+    <ul>
+      <li class="nav-item dropdown ">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          <!-- <button class="btn btn-danger btn-circle btn-xl">hi</button> -->
+          <button style="border-radius: 25px;height: 50px;width: 50px;">janaki</button>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="#">Dashboard</a>
+          <a class="dropdown-item" href="#">Edit Profile</a>
+          <a class="dropdown-item" href="#">Log Out</a>
+        </div>
+      </li>
+    </ul>
+  </nav>
+</div>
+
+<div class="center">
+  <p><button data-bs-toggle="modal" data-bs-target="#addbacklog1">Add blacklog</button></p>
+  <p><button data-bs-toggle="modal" data-bs-target="#exampleModal1">Add subject</button></p>
+</div>
+
+<!-- Modal 1 add backlog-->
+<div class="modal fade" id="addbacklog1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">SELECT THE SEMESTER</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#addbacklog2"
+          (click)="Read('1-1 semester')">1-1 semester</button>
+        <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#addbacklog2"
+          (click)="Read('1-2 semester')">1-2
+          semester</button>
+        <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#addbacklog2"
+          (click)="Read('2-1 semester')">2-1
+          semester</button>
+        <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#addbacklog2"
+          (click)="Read('2-2 semester')">2-2
+          semester</button>
+        <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#addbacklog2"
+          (click)="Read('3-1 semester')">3-1
+          semester</button>
+        <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#addbacklog2"
+          (click)="Read('3-2 semester')">3-2
+          semester</button>
+        <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#addbacklog2"
+          (click)="Read('4-1 semester')">4-1
+          semester</button>
+        <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#addbacklog2"
+          (click)="Read('4-2 semester')">4-2
+          semester</button>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Next</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal2 -->
+<div class="modal fade" id="addbacklog2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">SELECT YOUR SUBJECT</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="subjs" *ngFor="let Data of a">
+          <button class="btn btn-warning" data-bs-toggle="modal">{{Data[0]}}</button>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Next</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal 1 add subject-->
+<div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">SELECT THE SEMESTER</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal2">1-1 semester</button>
+        <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal2">1-2 semester</button>
+        <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal2">2-1 semester</button>
+        <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal2">2-2 semester</button>
+        <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal2">3-1 semester</button>
+        <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal2">3-2 semester</button>
+        <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal2">4-1 semester</button>
+        <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal2">4-2 semester</button>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Next</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal2 -->
+<div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">SELECT YOUR SUBJECT</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="subjs">
+          <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal3">Subject 1</button>
+          <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal3">Subject 2</button>
+          <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal3">Subject 3</button>
+          <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal3">Subject 4</button>
+          <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal3">Subject 5</button>
+          <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal3">Subject 6</button>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Next</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal3 -->
+<div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">SELECT YOUR TARGET</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="subjs">
+          <button class="btn btn-warning">7 Grades</button>
+          <button class="btn btn-warning">8 Grades</button>
+          <button class="btn btn-warning">9 Grades</button>
+          <button class="btn btn-warning">10 Grades</button>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-success" data-bs-toggle="modal"
+          data-bs-target="#exampleModal4">Submit</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal4 -->
+<div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <!-- <h1 class="modal-title fs-5" id="exampleModalLabel">SELECT YOUR TARGET</h1> -->
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="success">
+          Successfully added your Subject <b>🎉</b>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success" data-bs-dismiss="modal">Close</button>
+        <!-- <button type="button" class="btn btn-primary">OKAY</button> -->
+      </div>
+    </div>
+  </div>
+</div>
